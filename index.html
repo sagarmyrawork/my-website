@@ -30,6 +30,7 @@
       Healthy hair is not luck—it is a combination of nutrition, scalp care, and consistent habits.
       Small improvements daily lead to visible long-term results.
     </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg" width="250">
   </section>
 
   <section class="card">
@@ -116,36 +117,11 @@ function checkAnswer(ans) {
 
 // PERSONALITIES
 function showPerson(name) {
-  alert("Clicked: " + name);
-display.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg'>";
+function showPerson(name) {
   const display = document.getElementById("personDisplay");
 
-  if (!display) {
-    alert("personDisplay missing!");
-    return;
-  }
-
-  let imgUrl = "";
-  let title = "";
-
-  if (name === "zendaya") {
-    title = "Zendaya";
-    imgUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg";
-  }
-
-  else if (name === "taylor") {
-    title = "Taylor Swift";
-    imgUrl = "https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_Red_Tour_5%2C_2013.jpg";
-  }
-
-  else if (name === "billie") {
-    title = "Billie Eilish";
-    imgUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3f/Billie_Eilish_2019_by_Glenn_Francis.jpg";
-  }
-
-  display.innerHTML =
-    "<h3>" + title + "</h3>" +
-    "<img src='" + imgUrl + "' style='width:250px;border-radius:10px;display:block;margin-top:10px;'>";
+  display.innerHTML = "<h1 style='color:red'>TEST WORKS</h1>";
+}
 }</script>
   <script>
 alert("JS is working");
