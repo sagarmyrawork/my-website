@@ -96,12 +96,48 @@ function checkAnswer(ans) {
       <img src="Image2.jpg" alt="Hair 2">
     </div>
   </section>
+<!-- FAMOUS PERSONALITIES -->
+<section class="card">
+  <h2>Famous Personalities 🌟</h2>
 
+  <p>Click a name to see their style:</p>
+
+  <button onclick="showPerson('zendaya')">Zendaya</button>
+  <button onclick="showPerson('taylor')">Taylor Swift</button>
+  <button onclick="showPerson('billie')">Billie Eilish</button>
+
+  <div id="personDisplay" style="margin-top:20px;"></div>
+</section>
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Hair Confidence Hub</p>
   </footer>
+<script>
+function showPerson(name) {
+  let display = document.getElementById("personDisplay");
 
+  if (name === "zendaya") {
+    display.innerHTML = `
+      <h3>Zendaya</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg" width="250">
+    `;
+  }
+
+  else if (name === "taylor") {
+    display.innerHTML = `
+      <h3>Taylor Swift</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_Red_Tour_5%2C_2013.jpg" width="250">
+    `;
+  }
+
+  else if (name === "billie") {
+    display.innerHTML = `
+      <h3>Billie Eilish</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Billie_Eilish_2019_by_Glenn_Francis.jpg" width="250">
+    `;
+  }
+}
+</script>
 </body>
 </html>
 
