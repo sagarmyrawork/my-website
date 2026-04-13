@@ -149,3 +149,9 @@ button:hover {
 #personDisplay img:hover {
   transform: scale(1.1);
 }
+#personDisplay img {
+  max-width: 250px;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
