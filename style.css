@@ -1,35 +1,53 @@
+/* BACKGROUND ANIMATION */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  font-family: 'Comic Sans MS', Arial, sans-serif;
   color: #333;
+
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a1c4fd, #c2ffd8);
+  background-size: 800% 800%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #2c3e50, #4ca1af);
-  color: white;
   text-align: center;
   padding: 80px 20px;
+  color: white;
+  animation: fadeIn 2s ease-in;
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 45px;
+  animation: bounce 2s infinite alternate;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 20px;
 }
 
+/* BUTTONS */
 .btn {
-  background: white;
-  color: #2c3e50;
-  padding: 10px 20px;
-  border-radius: 25px;
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #ff6f61;
+  color: white;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #ff3b2f;
 }
 
 /* CARDS */
@@ -38,42 +56,69 @@ body {
   margin: 20px auto;
   padding: 25px;
   max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  animation: fadeInUp 1.5s ease;
 }
 
-/* GRID TIPS */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-  margin-top: 15px;
+  gap: 12px;
 }
 
+/* BOXES */
 .box {
-  background: #f0f0f0;
-  padding: 12px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.1) rotate(2deg);
 }
 
 /* GALLERY */
 .gallery {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gallery img {
   width: 250px;
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.15) rotate(-2deg);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #2c3e50;
   color: white;
-  margin-top: 30px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
 }
