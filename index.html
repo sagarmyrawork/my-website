@@ -116,30 +116,37 @@ function checkAnswer(ans) {
 
 // PERSONALITIES
 function showPerson(name) {
-  let display = document.getElementById("personDisplay");
+  alert("Clicked: " + name);
+
+  const display = document.getElementById("personDisplay");
 
   if (!display) {
-    console.log("personDisplay div not found");
+    alert("personDisplay missing!");
     return;
   }
 
+  let imgUrl = "";
+  let title = "";
+
   if (name === "zendaya") {
-    display.innerHTML =
-      "<h3>Zendaya</h3><img src='https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg' width='250'>";
+    title = "Zendaya";
+    imgUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg";
   }
 
   else if (name === "taylor") {
-    display.innerHTML =
-      "<h3>Taylor Swift</h3><img src='https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_Red_Tour_5%2C_2013.jpg' width='250'>";
+    title = "Taylor Swift";
+    imgUrl = "https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_Red_Tour_5%2C_2013.jpg";
   }
 
   else if (name === "billie") {
-    display.innerHTML =
-      "<h3>Billie Eilish</h3><img src='https://upload.wikimedia.org/wikipedia/commons/3/3f/Billie_Eilish_2019_by_Glenn_Francis.jpg' width='250'>";
+    title = "Billie Eilish";
+    imgUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3f/Billie_Eilish_2019_by_Glenn_Francis.jpg";
   }
-}
-    <button onclick="alert('working')">Test</button>
-</script>
+
+  display.innerHTML =
+    "<h3>" + title + "</h3>" +
+    "<img src='" + imgUrl + "' style='width:250px;border-radius:10px;display:block;margin-top:10px;'>";
+}</script>
   <script>
 alert("JS is working");
 </script>
