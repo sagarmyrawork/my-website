@@ -122,3 +122,21 @@ footer {
   from { transform: translateY(0); }
   to { transform: translateY(-10px); }
 }
+@keyframes pop {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(5); opacity: 0; }
+}
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #6a11cb;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
