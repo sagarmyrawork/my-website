@@ -6,24 +6,7 @@
   <title>Hair Confidence Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-document.addEventListener("click", function(e) {
-  let circle = document.createElement("div");
-  circle.style.position = "absolute";
-  circle.style.left = e.pageX + "px";
-  circle.style.top = e.pageY + "px";
-  circle.style.width = "10px";
-  circle.style.height = "10px";
-  circle.style.background = "pink";
-  circle.style.borderRadius = "50%";
-  circle.style.pointerEvents = "none";
-  circle.style.animation = "pop 0.6s ease-out";
 
-  document.body.appendChild(circle);
-
-  setTimeout(() => circle.remove(), 600);
-});
-</script>
 <body>
 
 <div class="bubbles">
@@ -48,17 +31,7 @@ document.addEventListener("click", function(e) {
       Small improvements daily lead to visible long-term results.
     </p>
   </section>
-<script>
-function checkAnswer(ans) {
-  let result = document.getElementById("quizResult");
 
-  if (ans === "a") {
-    result.innerHTML = "✅ Great! That's a healthy habit!";
-  } else {
-    result.innerHTML = "⚠️ Try oiling once a week for better hair health.";
-  }
-}
-</script>
   <section class="card">
   <h2>Quick Hair Quiz 🎯</h2>
 
@@ -112,29 +85,57 @@ function checkAnswer(ans) {
   <footer>
     <p>© 2026 Hair Confidence Hub</p>
   </footer>
-<script>
+  <script>
+// CLICK EFFECT
+document.addEventListener("click", function(e) {
+  let circle = document.createElement("div");
+  circle.style.position = "absolute";
+  circle.style.left = e.pageX + "px";
+  circle.style.top = e.pageY + "px";
+  circle.style.width = "10px";
+  circle.style.height = "10px";
+  circle.style.background = "pink";
+  circle.style.borderRadius = "50%";
+  circle.style.pointerEvents = "none";
+  circle.style.animation = "pop 0.6s ease-out";
+
+  document.body.appendChild(circle);
+  setTimeout(() => circle.remove(), 600);
+});
+
+// QUIZ
+function checkAnswer(ans) {
+  let result = document.getElementById("quizResult");
+
+  if (ans === "a") {
+    result.innerHTML = "✅ Great! That's a healthy habit!";
+  } else {
+    result.innerHTML = "⚠️ Try oiling once a week for better hair health.";
+  }
+}
+
+// PERSONALITIES
 function showPerson(name) {
   let display = document.getElementById("personDisplay");
 
+  if (!display) {
+    console.log("personDisplay div not found");
+    return;
+  }
+
   if (name === "zendaya") {
-    display.innerHTML = `
-      <h3>Zendaya</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg" width="250">
-    `;
+    display.innerHTML =
+      "<h3>Zendaya</h3><img src='https://upload.wikimedia.org/wikipedia/commons/3/3e/Zendaya_2019_by_Glenn_Francis.jpg' width='250'>";
   }
 
   else if (name === "taylor") {
-    display.innerHTML = `
-      <h3>Taylor Swift</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_Red_Tour_5%2C_2013.jpg" width="250">
-    `;
+    display.innerHTML =
+      "<h3>Taylor Swift</h3><img src='https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_Red_Tour_5%2C_2013.jpg' width='250'>";
   }
 
   else if (name === "billie") {
-    display.innerHTML = `
-      <h3>Billie Eilish</h3>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Billie_Eilish_2019_by_Glenn_Francis.jpg" width="250">
-    `;
+    display.innerHTML =
+      "<h3>Billie Eilish</h3><img src='https://upload.wikimedia.org/wikipedia/commons/3/3f/Billie_Eilish_2019_by_Glenn_Francis.jpg' width='250'>";
   }
 }
 </script>
