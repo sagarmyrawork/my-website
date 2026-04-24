@@ -8,8 +8,8 @@
 /* BODY */
 body {
   font-family: Arial, sans-serif;
-  background: #f6f2eb;
-  color: #4a2c1d;
+  background: #f7f2eb;
+  color: #4b2e1f;
   line-height: 1.6;
 }
 
@@ -19,185 +19,161 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 8%;
-  background: #f6f2eb;
+  background: #f7f2eb;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: #5a341c;
 }
 
 .nav-links a {
-  margin-left: 25px;
+  margin-left: 28px;
   text-decoration: none;
   color: #5a341c;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #8b5e34;
+  color: #8b5a2b;
 }
 
 /* HERO */
 .hero {
+  height: 90vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 80px 8%;
-  gap: 40px;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8%;
+  background: linear-gradient(
+      rgba(247, 242, 235, 0.75),
+      rgba(247, 242, 235, 0.75)
+    ),
+    url("Image1.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-text {
-  flex: 1;
+.hero-content {
+  max-width: 850px;
 }
 
 .hero h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
-  color: #4a2c1d;
+  font-size: 54px;
+  margin-bottom: 25px;
+  color: #4b2e1f;
 }
 
 .hero p {
   font-size: 20px;
-  margin-bottom: 30px;
-  max-width: 600px;
-}
-
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 10px;
+  margin-bottom: 35px;
 }
 
 /* BUTTON */
-.btn,
-button {
+.btn {
+  display: inline-block;
   background: #8b5a2b;
   color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 30px;
-  cursor: pointer;
   text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 30px;
   font-size: 16px;
   transition: 0.3s;
-  margin: 8px;
 }
 
-.btn:hover,
-button:hover {
-  background: #6f431f;
+.btn:hover {
+  background: #6d431f;
   transform: translateY(-2px);
 }
 
 /* SECTION */
 .section {
-  padding: 80px 8%;
+  padding: 90px 8%;
   text-align: center;
 }
 
 .section h2 {
-  font-size: 44px;
-  margin-bottom: 20px;
-  color: #4a2c1d;
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #4b2e1f;
 }
 
-.section p {
-  max-width: 850px;
-  margin: auto;
-  font-size: 18px;
+/* SOFT BACKGROUND */
+.soft-bg {
+  background: #fffaf4;
+}
+
+/* GRID */
+.grid,
+.routine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
 }
 
 /* CARD */
 .card {
   background: white;
-  border-radius: 20px;
-  margin: 40px auto;
-  width: 90%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  padding: 50px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-/* BOX */
-.box {
-  background: #fff8f0;
-  padding: 25px;
-  border-radius: 15px;
-  font-weight: 600;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
 }
 
-.box:hover {
-  transform: translateY(-5px);
+.card:hover {
+  transform: translateY(-6px);
 }
 
-/* GALLERY */
-.gallery {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
+.card h3 {
+  margin-bottom: 15px;
+  color: #5a341c;
 }
 
-.gallery img {
-  width: 320px;
-  border-radius: 15px;
-  transition: 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-/* PERSONALITIES */
-#personDisplay {
-  margin-top: 30px;
-  min-height: 250px;
-}
-
-#personDisplay img {
-  width: 260px;
-  border-radius: 15px;
-  margin-top: 15px;
+/* TIPS */
+.tips-list {
+  max-width: 850px;
+  margin: auto;
+  text-align: left;
+  font-size: 18px;
+  line-height: 2;
 }
 
 /* FOOTER */
 footer {
+  background: #f0e6d8;
   text-align: center;
-  padding: 40px;
-  background: #f0e8dc;
-  margin-top: 50px;
+  padding: 35px;
+  font-size: 15px;
+  color: #5a341c;
 }
 
 /* MOBILE */
 @media (max-width: 900px) {
-  .hero {
+  .navbar {
     flex-direction: column;
-    text-align: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    margin: 0 12px;
   }
 
   .hero h1 {
     font-size: 38px;
   }
 
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
+  .hero p {
+    font-size: 18px;
+  }
+
+  .section h2 {
+    font-size: 34px;
   }
 }
