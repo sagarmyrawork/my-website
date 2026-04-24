@@ -57,7 +57,21 @@ body {
   background: white;
   color: #5a3a22;
 }
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+  background: #6b5a32;
+  color: #f8f3ec;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  text-align: center;
+}
 
+.announcement-track {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 /* HERO SECTION */
 .hero {
   display: flex;
