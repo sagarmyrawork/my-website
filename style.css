@@ -232,11 +232,17 @@ body {
   min-width: 280px;
 }
 
+.split-image {
+  overflow: hidden;
+}
+
+/* HAIR TYPE SECTION IMAGES FIX */
 .split-image img {
   width: 100%;
   max-width: 500px;
-  height: auto;
-  border-radius: 10px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
   display: block;
   margin: auto;
 }
