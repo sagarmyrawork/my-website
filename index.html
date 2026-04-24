@@ -9,43 +9,58 @@
 
 <body>
 
-<div class="bubbles">
-  <span></span><span></span><span></span><span></span><span></span>
-</div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Hair Confidence Hub</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#tips">Care Tips</a>
+      <a href="#quiz">Quiz</a>
+      <a href="about.html">More</a>
+    </div>
+  </nav>
 
   <!-- HERO SECTION -->
   <header class="hero">
-    <h1>Hair Confidence Hub</h1>
-    <p>Science-backed tips for stronger, healthier, and confident hair</p>
-    <a href="#tips" class="btn">Explore Tips</a>
- <a href="about.html" class="btn">About Us</a>
-  <a href="https://www.wikipedia.org" target="_blank" class="btn">
-    Learn More </a>
+    <div class="hero-text">
+      <h1>Healthy Hair, Strong Confidence</h1>
+      <p>
+        Discover simple routines, protective styling techniques,
+        and expert tips for naturally beautiful and healthier hair.
+      </p>
+
+      <a href="#tips" class="btn">Start Learning</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="Image1.jpg" alt="Beautiful Hair">
+    </div>
   </header>
 
   <!-- ABOUT -->
-  <section class="card">
-    <h2>Why Hair Care Matters</h2>
+  <section id="about" class="section">
+    <h2>Our Journey</h2>
     <p>
-      Healthy hair is not luck—it is a combination of nutrition, scalp care, and consistent habits.
-      Small improvements daily lead to visible long-term results.
+      Welcome to Hair Confidence Hub — where beauty meets healthy habits.
+      Our goal is to help people feel confident about their hair through
+      better routines, smart care tips, and practical knowledge that works.
     </p>
-  
   </section>
 
-  <section class="card">
-  <h2>Quick Hair Quiz 🎯</h2>
+  <!-- QUIZ -->
+  <section id="quiz" class="section card">
+    <h2>Quick Hair Quiz</h2>
+    <p>How often should you oil your hair?</p>
 
-  <p>How often do you oil your hair?</p>
+    <button onclick="checkAnswer('a')">Once a Week</button>
+    <button onclick="checkAnswer('b')">Never</button>
+    <button onclick="checkAnswer('c')">Every Day</button>
 
-  <button onclick="checkAnswer('a')">Once a week</button>
-  <button onclick="checkAnswer('b')">Never</button>
-  <button onclick="checkAnswer('c')">Every day</button>
+    <p id="quizResult"></p>
+  </section>
 
-  <p id="quizResult"></p>
-</section>
   <!-- TIPS -->
-  <section id="tips" class="card">
+  <section id="tips" class="section">
     <h2>10 Hair Care Tips</h2>
 
     <div class="grid">
@@ -62,50 +77,33 @@
     </div>
   </section>
 
+  <!-- FAMOUS PERSONALITIES -->
+  <section class="section card">
+    <h2>Famous Personalities</h2>
+    <p>Click to explore their signature hair styles</p>
+
+    <button onclick="showPerson('zendaya')">Zendaya</button>
+    <button onclick="showPerson('taylor')">Taylor Swift</button>
+    <button onclick="showPerson('billie')">Billie Eilish</button>
+
+    <div id="personDisplay"></div>
+  </section>
+
   <!-- GALLERY -->
-  <section class="card">
+  <section class="section">
     <h2>Hair Inspiration</h2>
+
     <div class="gallery">
-      <img src="Image1.jpg" alt="Hair 1">
-      <img src="Image2.jpg" alt="Hair 2">
+      <img src="Image1.jpg" alt="Hair Style 1">
+      <img src="Image2.jpg" alt="Hair Style 2">
     </div>
   </section>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Hair Confidence Hub</p>
   </footer>
-  <script>
-// CLICK EFFECT
-document.addEventListener("click", function(e) {
-  let circle = document.createElement("div");
-  circle.style.position = "absolute";
-  circle.style.left = e.pageX + "px";
-  circle.style.top = e.pageY + "px";
-  circle.style.width = "10px";
-  circle.style.height = "10px";
-  circle.style.background = "pink";
-  circle.style.borderRadius = "50%";
-  circle.style.pointerEvents = "none";
-  circle.style.animation = "pop 0.6s ease-out";
 
-  document.body.appendChild(circle);
-  setTimeout(() => circle.remove(), 600);
-});
-
-// QUIZ
-function checkAnswer(ans) {
-  let result = document.getElementById("quizResult");
-
-  if (ans === "a") {
-    result.innerHTML = "✅ Great! That's a healthy habit!";
-  } else {
-    result.innerHTML = "⚠️ Try oiling once a week for better hair health.";
-  }
-}
-
-</script>
-  
+  <script src="script.js"></script>
 </body>
 </html>
-
-
