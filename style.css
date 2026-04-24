@@ -57,20 +57,34 @@ body {
   background: white;
   color: #5a3a22;
 }
-/* ANNOUNCEMENT BAR */
+/* MOVING ANNOUNCEMENT BAR */
 .announcement-bar {
   background: #6b5a32;
   color: #f8f3ec;
   overflow: hidden;
   white-space: nowrap;
   padding: 12px 0;
-  text-align: center;
+  position: relative;
+  width: 100%;
 }
 
 .announcement-track {
+  display: inline-block;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
+  padding-left: 100%;
+  animation: moveText 20s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 /* HERO SECTION */
 .hero {
