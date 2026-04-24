@@ -240,13 +240,20 @@ body {
 .split-image img {
   width: 100%;
   max-width: 500px;
-  height: 340px;
-  object-fit: cover;
+  height: auto;
   border-radius: 12px;
   display: block;
   margin: auto;
 }
-
+/* ONLY for Hair Types page */
+.hair-type-img {
+  width: 100%;
+  max-width: 500px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
 .split-text h2 {
   font-size: 38px;
   margin-bottom: 20px;
