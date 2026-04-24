@@ -34,11 +34,11 @@
 
   <!-- STRAIGHT HAIR -->
   <section class="split-section">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-straight-hair.jpg" alt="Straight Hair">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <h2>Straight Hair</h2>
       <p>
         Straight hair becomes greasy faster and benefits from a healthy routine:
@@ -61,11 +61,11 @@
   </section>
 
   <section class="split-section reverse">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-straight-hair1.jpg" alt="Straight Hair Products">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <p>
         Recommended oils include Gisou Honey-Infused Hair Oil,
         Mise en Scene Hair Serum, Innersense Harmonic Treatment Oil,
@@ -81,11 +81,11 @@
 
   <!-- WAVY HAIR -->
   <section class="split-section">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-wavy-hair.jpg" alt="Wavy Hair">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <h2>Wavy Hair</h2>
       <p>
         Wavy hair sits between straight and curly hair.
@@ -106,11 +106,11 @@
   </section>
 
   <section class="split-section reverse">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-wavy-hair1.jpg" alt="Wavy Hair Styling">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <p>
         Recommended styling products:
         Bumble and Bumble Curl Defining Cream,
@@ -123,11 +123,11 @@
 
   <!-- CURLY HAIR -->
   <section class="split-section">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-curly-hair.jpg" alt="Curly Hair">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <h2>Curly Hair</h2>
       <p>
         Curly hair needs moisture-rich shampoo and careful conditioning.
@@ -147,11 +147,11 @@
   </section>
 
   <section class="split-section reverse">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-curly-hair1.jpg" alt="Curly Hair Oils">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <p>
         Recommended curly hair products:
         Moroccan Curl Cream,
@@ -164,11 +164,11 @@
 
   <!-- COILY HAIR -->
   <section class="split-section">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="routines-coily-hair.jpg" alt="Coily Hair">
     </div>
 
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <h2>Coily Hair</h2>
       <p>
         Coily hair (Type 4) is naturally fragile and needs deep hydration.
@@ -221,6 +221,23 @@
 
     </div>
   </footer>
+<script>
+function revealOnScroll() {
+  let reveals = document.querySelectorAll(".reveal");
 
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 </body>
 </html>
