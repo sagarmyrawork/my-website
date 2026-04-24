@@ -12,98 +12,120 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Hair Confidence Hub</div>
+
     <div class="nav-links">
-      <a href="#about">About</a>
+      <a href="#home">Home</a>
+      <a href="#types">Hair Types</a>
       <a href="#tips">Care Tips</a>
-      <a href="#quiz">Quiz</a>
-      <a href="about.html">More</a>
+      <a href="#routines">Hair Routines</a>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Healthy Hair, Strong Confidence</h1>
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1>Your Journey to Healthy, Beautiful Hair Starts Here</h1>
+
       <p>
-        Discover simple routines, protective styling techniques,
-        and expert tips for naturally beautiful and healthier hair.
+        Discover personalized hair care tips, understand your hair type,
+        and build routines that bring confidence, strength, and beauty
+        to your everyday life.
       </p>
 
-      <a href="#tips" class="btn">Start Learning</a>
-    </div>
-
-    <div class="hero-image">
-      <img src="Image1.jpg" alt="Beautiful Hair">
+      <a href="#types" class="btn">Explore More</a>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>Our Journey</h2>
-    <p>
-      Welcome to Hair Confidence Hub — where beauty meets healthy habits.
-      Our goal is to help people feel confident about their hair through
-      better routines, smart care tips, and practical knowledge that works.
-    </p>
-  </section>
-
-  <!-- QUIZ -->
-  <section id="quiz" class="section card">
-    <h2>Quick Hair Quiz</h2>
-    <p>How often should you oil your hair?</p>
-
-    <button onclick="checkAnswer('a')">Once a Week</button>
-    <button onclick="checkAnswer('b')">Never</button>
-    <button onclick="checkAnswer('c')">Every Day</button>
-
-    <p id="quizResult"></p>
-  </section>
-
-  <!-- TIPS -->
-  <section id="tips" class="section">
-    <h2>10 Hair Care Tips</h2>
+  <!-- HAIR TYPES -->
+  <section id="types" class="section">
+    <h2>Understanding Hair Types</h2>
 
     <div class="grid">
-      <div class="box">Eat protein-rich balanced diet</div>
-      <div class="box">Use mild shampoo regularly</div>
-      <div class="box">Avoid excessive heat styling</div>
-      <div class="box">Oil your hair weekly</div>
-      <div class="box">Stay hydrated daily</div>
-      <div class="box">Use wide-tooth comb</div>
-      <div class="box">Avoid tight hairstyles</div>
-      <div class="box">Trim every 6–8 weeks</div>
-      <div class="box">Reduce stress</div>
-      <div class="box">Be consistent with care routine</div>
+      <div class="card">
+        <h3>Straight Hair</h3>
+        <p>
+          Naturally smooth and shiny, straight hair tends to reflect more light
+          and often becomes oily faster due to easy oil movement from scalp to ends.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Wavy Hair</h3>
+        <p>
+          Wavy hair offers natural texture and volume. It benefits from hydration
+          and lightweight products that enhance natural movement.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Curly Hair</h3>
+        <p>
+          Curly hair requires moisture retention and gentle care.
+          Curl-friendly routines help reduce frizz and improve definition.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coily Hair</h3>
+        <p>
+          Coily hair is beautifully textured and delicate.
+          Deep conditioning and protective styling are especially important.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- FAMOUS PERSONALITIES -->
-  <section class="section card">
-    <h2>Famous Personalities</h2>
-    <p>Click to explore their signature hair styles</p>
+  <!-- CARE TIPS -->
+  <section id="tips" class="section soft-bg">
+    <h2>Essential Hair Care Tips</h2>
 
-    <button onclick="showPerson('zendaya')">Zendaya</button>
-    <button onclick="showPerson('taylor')">Taylor Swift</button>
-    <button onclick="showPerson('billie')">Billie Eilish</button>
-
-    <div id="personDisplay"></div>
+    <div class="tips-list">
+      <p>✔ Use a mild shampoo suitable for your scalp type</p>
+      <p>✔ Avoid excessive heat styling and harsh treatments</p>
+      <p>✔ Trim hair regularly to reduce split ends</p>
+      <p>✔ Maintain a protein-rich balanced diet</p>
+      <p>✔ Stay hydrated for stronger hair growth</p>
+      <p>✔ Massage your scalp to improve blood circulation</p>
+      <p>✔ Use wide-tooth combs to prevent breakage</p>
+      <p>✔ Protect hair from sun and pollution exposure</p>
+    </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="section">
-    <h2>Hair Inspiration</h2>
+  <!-- HAIR ROUTINES -->
+  <section id="routines" class="section">
+    <h2>Healthy Hair Routines</h2>
 
-    <div class="gallery">
-      <img src="Image1.jpg" alt="Hair Style 1">
-      <img src="Image2.jpg" alt="Hair Style 2">
+    <div class="routine-grid">
+      <div class="card">
+        <h3>Daily Routine</h3>
+        <p>
+          Gentle detangling, hydration, scalp cleanliness,
+          and avoiding unnecessary heat exposure.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Weekly Routine</h3>
+        <p>
+          Hair oiling, deep conditioning, scalp massage,
+          and nourishing treatment masks.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Monthly Routine</h3>
+        <p>
+          Trimming split ends, reviewing product effectiveness,
+          and adjusting care methods based on seasonal needs.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Hair Confidence Hub</p>
+    <p>© 2026 Hair Confidence Hub | Healthy Hair. Strong Confidence.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
