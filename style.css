@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 
-/* VERY IMPORTANT FIX */
+/* IMPORTANT FIX */
 html, body {
-  overflow-x: hidden;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* BODY */
@@ -58,7 +58,7 @@ body {
   color: #5a3a22;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   display: flex;
   align-items: center;
@@ -66,6 +66,7 @@ body {
   padding: 60px 6%;
   gap: 40px;
   flex-wrap: wrap;
+  background: #f8f3ec;
 }
 
 .hero-text {
@@ -74,15 +75,16 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 68px;
   line-height: 1;
   margin-bottom: 20px;
+  color: #3f2413;
 }
 
 .hero-text p {
   font-size: 18px;
   margin-bottom: 25px;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .hero-image {
@@ -92,14 +94,14 @@ body {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   height: auto;
   border-radius: 10px;
   display: block;
   margin: auto;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn,
 .small-btn {
   display: inline-block;
@@ -109,6 +111,7 @@ body {
   padding: 14px 28px;
   border-radius: 30px;
   transition: 0.3s;
+  font-size: 15px;
 }
 
 .btn:hover,
@@ -116,23 +119,69 @@ body {
   background: #6f431f;
 }
 
-/* GENERAL SECTION */
-.page-title,
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  padding: 70px 6% 40px;
+}
+
+.page-title h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #4b2e1f;
+}
+
+.page-title p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* OUR JOURNEY */
 .journey {
   text-align: center;
-  padding: 70px 6%;
+  padding: 80px 6%;
+  background: white;
 }
 
-.page-title h1,
 .journey h2 {
   font-size: 42px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.page-title p,
 .journey p {
   max-width: 850px;
   margin: auto;
+  font-size: 18px;
+}
+
+/* MISSION STRIP */
+.mission-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 6%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mission-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.mission-left h2 {
+  font-size: 42px;
+}
+
+.mission-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.mission-right p {
+  margin-bottom: 20px;
   font-size: 18px;
 }
 
@@ -164,7 +213,16 @@ body {
   margin: auto;
 }
 
-/* GRID */
+.split-text h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.split-text p {
+  font-size: 17px;
+}
+
+/* GRID SECTION */
 .tips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -172,11 +230,22 @@ body {
   gap: 25px;
 }
 
+/* CARD */
 .card {
   background: white;
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card h2,
+.card h3 {
+  margin-bottom: 15px;
+  color: #4b2e1f;
+}
+
+.card p {
+  font-size: 16px;
 }
 
 /* FOOTER */
@@ -189,41 +258,60 @@ body {
   text-align: center;
   font-size: 42px;
   margin-bottom: 40px;
+  color: #4b2e1f;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .footer-left,
 .footer-right {
   flex: 1;
-  min-width: 250px;
+  min-width: 280px;
+}
+
+.footer-left p {
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .footer-center {
   text-align: center;
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
 }
 
 .footer-center img {
-  width: 120px;
+  width: 130px;
   height: auto;
   border-radius: 8px;
 }
 
-/* MOBILE */
+/* LARGE FOOTER IMAGE */
+.footer-large-logo {
+  width: 220px;
+  height: auto;
+  margin-top: 20px;
+  display: block;
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 900px) {
   .hero,
   .split-section,
+  .mission-strip,
   .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column;
   }
 
   .hero-text h1 {
@@ -232,6 +320,7 @@ body {
 
   .page-title h1,
   .journey h2,
+  .mission-left h2,
   .footer h2 {
     font-size: 32px;
   }
@@ -239,5 +328,9 @@ body {
   .navbar {
     justify-content: center;
     gap: 20px;
+  }
+
+  .footer-large-logo {
+    margin: 20px auto;
   }
 }
