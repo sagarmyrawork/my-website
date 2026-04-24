@@ -43,10 +43,10 @@
 
   <!-- STRAIGHT -->
   <section class="split-section">
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="hair-types-straight-hair.jpg" alt="Straight Hair">
     </div>
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <h2>Straight Hair</h2>
       <p>
         Straight hair reflects more light and often becomes oily faster.
@@ -173,6 +173,23 @@
 
     </div>
   </footer>
+<script>
+function revealOnScroll() {
+  let reveals = document.querySelectorAll(".reveal");
 
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 </body>
 </html>
