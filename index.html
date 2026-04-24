@@ -31,7 +31,7 @@
 </div>
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-text">
+    <div class="hero-text reveal reveal-up">
       <h1>ALL<br>FLAWLESS</h1>
 
       <p>
@@ -43,7 +43,7 @@
       <a href="hair-types.html" class="btn">START LEARNING</a>
     </div>
 
-    <div class="hero-image">
+    <div class="hero-image reveal reveal-left">
       <img src="routines-straight-hair.jpg" alt="Hair Model">
     </div>
   </section>
@@ -114,5 +114,23 @@
 
   </div>
 </footer>
+<script>
+function revealOnScroll() {
+  let reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 </body>
 </html>
