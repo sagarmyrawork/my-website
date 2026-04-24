@@ -34,7 +34,7 @@
 
   <!-- HERO SECTION -->
   <section class="split-section">
-    <div class="split-text">
+    <div class="split-text reveal reveal-up">
       <h1>THE POWER OF A STEADY RHYTHM</h1>
 
       <p>
@@ -50,7 +50,7 @@
       </p>
     </div>
 
-    <div class="split-image">
+    <div class="split-image reveal reveal-left">
       <img src="care-tips-model.jpg" alt="Hair Care Model">
     </div>
   </section>
@@ -143,6 +143,23 @@
 
     </div>
   </footer>
+<script>
+function revealOnScroll() {
+  let reveals = document.querySelectorAll(".reveal");
 
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 </body>
 </html>
