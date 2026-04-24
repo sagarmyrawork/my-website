@@ -371,3 +371,26 @@ body {
     margin: 20px auto;
   }
 }
+/* SCROLL ANIMATIONS */
+
+/* hidden before animation */
+.reveal {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* image animation: left to right */
+.reveal-left {
+  transform: translateX(-100px);
+}
+
+/* text animation: bottom to top */
+.reveal-up {
+  transform: translateY(80px);
+}
+
+/* visible state */
+.reveal.active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
