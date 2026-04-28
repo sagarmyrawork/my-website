@@ -348,7 +348,17 @@ font-family: "Playfair Display", serif;
   height: auto;
   border-radius: 8px;
 }
+.footer-main {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 
+.footer-disclaimer {
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 700px;
+}
 /* LARGE FOOTER IMAGE */
 .footer-large-logo {
   width: 220px;
