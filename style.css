@@ -317,7 +317,7 @@ font-family: "Playfair Display", serif;
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 /* All 3 columns */
@@ -325,7 +325,6 @@ font-family: "Playfair Display", serif;
 .footer-center,
 .footer-right {
   flex: 1;
-  min-width: 280px;
 }
 
 /* LEFT SECTION */
